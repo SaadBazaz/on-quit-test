@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import navigationService from '@/utils/react-router-multiplayer/NavigationService';
 
-import { insertCoin, useMultiplayerState } from 'playroomkit';
+import { insertCoin, onPlayerJoin, useMultiplayerState } from 'playroomkit';
 
 import InGameLayout from '@/layouts/InGame';
 
@@ -25,7 +25,16 @@ async function initializeSdk() {
 		try {
 			await insertCoin({
 				...baseUrlOptions,
+				reconnectGracePeriod: 5000
 			});
+
+			onPlayerJoin((player) => {
+				console.log("a player joined!");
+				player.onQuit(() => {
+					console.log("a player quit!");
+				})
+			})
+
 		} catch (error) {
 			console.log(error);
 			return { error };

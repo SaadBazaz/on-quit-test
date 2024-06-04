@@ -22,7 +22,12 @@ const Root = () => {
 	const [isLoadingAssets, setIsLoadingAssets] = useState(true)
 
 	const _preloadAssets = async () => {
-		await preloadAssets()
+		try {
+			await preloadAssets()
+		}
+		catch(err) {
+			console.error("Could not preload some assets.")
+		}
 		setIsLoadingAssets(false)
 	}
 

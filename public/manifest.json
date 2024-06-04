@@ -1,28 +1,28 @@
 {
-  "short_name": "%GAME_NAME%",
-  "name": "%GAME_NAME%",
+  "short_name": "onquittest",
+  "name": "onquittest",
   "description": "Play this game with friends and family.",
   "icons": [
     {
-      "src": "manifest-icon-192.maskable.png",
+      "src": "/manifest-icon-192.maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "manifest-icon-192.maskable.png",
+      "src": "/manifest-icon-192.maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "manifest-icon-512.maskable.png",
+      "src": "/manifest-icon-512.maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "manifest-icon-512.maskable.png",
+      "src": "/manifest-icon-512.maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -54,7 +54,7 @@
     {
       "name": "Open a new game",
       "url": "/",
-      "description": "Quickly spin up a game of %GAME_NAME%!",
+      "description": "Quickly spin up a game of onquittest!",
       "icons": [
         {
           "src": "/manifest-icon-512.maskable.png",
